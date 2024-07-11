@@ -1,0 +1,14 @@
+{% extends 'master.html' %}
+
+{% block title %}
+All Comments
+{% endblock %}
+
+{% block content %}
+  <h1>All Comments</h1>
+  <ul>
+    {% for comment in all_comments %}
+      <li>Blog ID: {{ comment.post.id }} - {{ comment.content }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

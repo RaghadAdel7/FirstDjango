@@ -1,0 +1,26 @@
+{% extends 'master.html' %}
+
+{% block title %}
+Main Page
+{% endblock %}
+
+{% block content %}
+<h2 style="margin-left:20px"> Welcome to Blog Website :) </h2>
+<nav>
+    <ul style=" margin-left: 20px;">
+        <li>
+            <a href="{% url 'users' %}" style="text-decoration: none; color: dimgrey; padding: 5px 10px;">Users</a>
+        </li>
+        <li>
+            <a href="{% url 'blogs' %}" style="text-decoration: none; color: dimgrey; padding: 5px 10px;">Blogs</a>
+        </li>
+        <li>
+            <a href="{% url 'comments' %}" style="text-decoration: none; color: dimgrey; padding: 5px 10px;">Comments</a>
+        </li>
+        <li>
+            <a href="{% url 'categories' %}" style="text-decoration: none; color: dimgrey; padding: 5px 10px;">Categories</a>
+        </li>
+    </ul>
+</nav>
+
+{% endblock %}

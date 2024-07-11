@@ -1,0 +1,28 @@
+
+{% extends 'master.html' %}
+
+{% block title %}
+Users List
+{% endblock %}
+
+{% block content %}
+<h1>Users List</h1>
+
+<table border="2">
+  <thead>
+    <tr style="background: gray; color: white">
+      <th>Username</th>
+      <th>Email</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for user in users %}
+    <tr>
+      <td>{{ user.username }}</td>
+      <td>{{ user.email }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

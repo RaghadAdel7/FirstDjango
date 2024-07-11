@@ -1,0 +1,19 @@
+{% extends 'master.html' %}
+
+{% block title %}
+{{ post.title }}
+{% endblock %}
+
+{% block content %}
+<div style='margin-left: 20px'>
+  <h2>Blog title: {{ post.title }}</h2>
+   <p>Category: {{ post.category }}</p>
+    <p>Date Published: {{ post.date_published }}</p>
+
+<p> Content: {{ post.content }}</p>
+  <h3>Comments</h3>
+    {% for comment in comments %}
+      {{ comment.content }}
+    {% endfor %}
+</div>
+{% endblock %}

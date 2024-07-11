@@ -1,0 +1,14 @@
+{% extends 'master.html' %}
+
+{% block title %}
+Categories
+{% endblock %}
+
+{% block content %}
+  <h1> Our Categories List</h1>
+  <ul>
+    {% for category in categories_list %}
+      <li>{{ category.name }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
